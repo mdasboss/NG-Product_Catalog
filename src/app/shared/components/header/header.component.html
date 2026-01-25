@@ -1,9 +1,19 @@
-<header class="app-header">
-    <nav class="nav">
-        <a routerLink="/">Home</a>
-        <a routerLink="/products">Product</a>
-        <a routerLink="/profile">Profile</a>
-        <a routerLink="/login">Login</a>
-        <a routerLink="/signup">Signup</a>
-    </nav>
-</header>
+
+<mat-toolbar color="primary" class="px-3">
+  <a class="navbar-brand text-white text-decoration-none me-3" routerLink="/">Product Catalog</a>
+
+  <a mat-button routerLink="/products">Products</a>
+  <a mat-button routerLink="/profile">Profile</a>
+
+  <span class="flex-grow-1"></span>
+
+  <!-- Auth-aware actions -->
+  <!-- <ng-container *ngIf="(isAuth$ | async) === false"> -->
+    <a mat-button routerLink="/auth/login">Login</a>
+    <a mat-stroked-button color="accent" routerLink="/auth/signup">Signup</a>
+  <!-- </ng-container> -->
+
+  <!-- <button *ngIf="(isAuth$ | async) === true" mat-raised-button color="warn" (click)="logout()"> -->
+    Logout
+  <!-- </button> -->
+</mat-toolbar>

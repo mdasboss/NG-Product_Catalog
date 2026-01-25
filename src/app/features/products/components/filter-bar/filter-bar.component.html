@@ -1,0 +1,46 @@
+
+<!-- Optional wrapper for spacing / border -->
+<div class="p-3 bg-white rounded-3 border d-grid gap-3"
+     style="grid-template-columns: minmax(200px, 1fr) 200px 160px 160px;">
+
+  <!-- Query -->
+  <input
+    #q
+    type="text"
+    class="form-control form-control-sm"
+    [value]="query"
+    (input)="queryChange.emit(q.value)"
+    placeholder="Search..."
+  />
+
+  <!-- Category -->
+  <select
+    #sel
+    class="form-select form-select-sm"
+    [value]="category ?? ''"
+    (change)="categoryChange.emit(sel.value || null)"
+  >
+    <option value="">All</option>
+    <option *ngFor="let c of categories" [value]="c">{{ c }}</option>
+  </select>
+
+  <!-- Min price -->
+  <input
+    #min
+    type="number"
+    class="form-control form-control-sm"
+    [value]="minPrice ?? ''"
+    (input)="minPriceChange.emit(min.value === '' ? null : +min.value)"
+    placeholder="Min price"
+  />
+
+  <!-- Max price -->
+  <input
+    #max
+    type="number"
+    class="form-control form-control-sm"
+    [value]="maxPrice ?? ''"
+    (input)="maxPriceChange.emit(max.value === '' ? null : +max.value)"
+    placeholder="Max price"
+  />
+</div>

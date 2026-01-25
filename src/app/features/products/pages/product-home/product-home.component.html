@@ -1,0 +1,51 @@
+
+<div class="d-flex align-items-center mb-3">
+  <h2 class="m-0">Products</h2>
+  <span class="ms-2 text-muted">Browse and filter</span>
+</div>
+
+<!-- Filter Bar -->
+<app-filter-bar
+  class="mb-3"
+  [query]="store.querySig()"
+  [category]="store.categorySig()"
+  [minPrice]="store.minPriceSig()"
+  [maxPrice]="store.maxPriceSig()"
+  (queryChange)="store.querySig.set($event)"
+  (categoryChange)="store.categorySig.set($event)"
+  (minPriceChange)="store.minPriceSig.set($event)"
+  (maxPriceChange)="store.maxPriceSig.set($event)">
+</app-filter-bar>
+
+<!-- Loading -->
+<div class="d-flex justify-content-center my-4" *ngIf="(store.loading$ | async)">
+  <mat-progress-spinner color="primary" diameter="40" mode="indeterminate"></mat-progress-spinner>
+</div>
+
+<!-- Products Grid -->
+<div class="row g-3" *ngIf="!(store.loading$ | async)">
+  @for (p of store.filtered(); track p.id) {
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <mat-card class="h-100">
+        <mat-card-header>
+          <mat-card-title>{{ p.title }}</mat-card-title>
+          <mat-card-subtitle>{{ p.category }}</mat-card-subtitle>
+        </mat-card-header>
+        <mat-card-content>
+          <div class="fw-bold fs-5 mt-2">{{ p.price | currency:'INR' }}</div>
+        </mat-card-content>
+        <mat-card-actions class="d-flex justify-content-between">
+          <button mat-stroked-button color="primary">Details</button>
+          <button mat-raised-button color="accent">Add to cart</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+  } @empty {
+    <div class="col-12">
+      <div class="alert alert-info mb-0">No results found.</div>
+    </div>
+  }
+</div>
+
+<!-- Error -->
+<div *ngIf="(store.error$ | async) as err" class="alert alert-danger mt-3">{{ err }}</div>

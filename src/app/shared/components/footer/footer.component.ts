@@ -6,6 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-  readonly  getCurrentYear = new Date().getFullYear();
+  readonly  year = new Date().getFullYear();
  
 }

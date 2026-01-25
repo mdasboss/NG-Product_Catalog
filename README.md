@@ -25,3 +25,11 @@ Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To u
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+
+## Endpoint
+GET http://localhost:3000/api/products
+GET http://localhost:3000/api/users
+GET http://localhost:3000/api/users?email=john@example.com&password=123456 (for our simple login approach)
+POST http://localhost:3000/api/users (signup)
+
