@@ -1,19 +1,20 @@
 
 <mat-toolbar color="primary" class="px-3">
   <a class="navbar-brand text-white text-decoration-none me-3" routerLink="/">Product Catalog</a>
-
-  <a mat-button routerLink="/products">Products</a>
-  <a mat-button routerLink="/profile">Profile</a>
-
+  <ng-container *ngIf="(isAuth$ | async) === true">
+ <a mat-button routerLink="/products">Products</a>
+  <a mat-button routerLink="/auth/profile">Profile</a>
+  </ng-container>
+ 
   <span class="flex-grow-1"></span>
 
   <!-- Auth-aware actions -->
-  <!-- <ng-container *ngIf="(isAuth$ | async) === false"> -->
+  <ng-container *ngIf="(isAuth$ | async) === false">
     <a mat-button routerLink="/auth/login">Login</a>
     <a mat-stroked-button color="accent" routerLink="/auth/signup">Signup</a>
-  <!-- </ng-container> -->
+  </ng-container>
 
-  <!-- <button *ngIf="(isAuth$ | async) === true" mat-raised-button color="warn" (click)="logout()"> -->
+  <button *ngIf="(isAuth$ | async) === true" mat-raised-button color="warn" (click)="logout()">
     Logout
-  <!-- </button> -->
+  </button>
 </mat-toolbar>

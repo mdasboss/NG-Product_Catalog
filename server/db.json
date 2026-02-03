@@ -1,13 +1,57 @@
-
 {
   "users": [
-    { "id": 1, "email": "maruthi@example.com", "password": "dasar", "name": "Maruthi Dasar" },
-    { "id": 2, "email": "dasar@example.com", "password": "maruthi",  "name": "Dasar Maruthi"}
+    {
+      "id": 1,
+      "email": "maruthi@example.com",
+      "password": "dasar",
+      "name": "Maruthi Dasar"
+    },
+    {
+      "id": 2,
+      "email": "dasar@example.com",
+      "password": "maruthi",
+      "name": "Dasar Maruthi"
+    },
+    {
+      "email": "maruthi@gmail.com",
+      "password": "Maruthi@123",
+      "id": 3
+    },
+    {
+      "email": "maruthi@example.com",
+      "password": "dasar",
+      "id": 4
+    },
+    {
+      "email": "maruthi@example.com",
+      "password": "dasar",
+      "id": 5
+    }
   ],
   "products": [
-    { "id": 1, "title": "iPhone 15",    "category": "Phones",  "price": 900 },
-    { "id": 2, "title": "MacBook Air",  "category": "Laptops", "price": 1200 },
-    { "id": 3, "title": "Pixel 8",      "category": "Phones",  "price": 800 },
-    { "id": 4, "title": "ThinkPad X1",  "category": "Laptops", "price": 1500 }
+    {
+      "id": 1,
+      "title": "iPhone 15",
+      "category": "Phones",
+      "price": 900
+    },
+    {
+      "id": 2,
+      "title": "MacBook Air",
+      "category": "Laptops",
+      "price": 1200
+    },
+    {
+      "id": 3,
+      "title": "Pixel 8",
+      "category": "Phones",
+      "price": 800
+    },
+    {
+      "id": 4,
+      "title": "ThinkPad X1",
+      "category": "Laptops",
+      "price": 1500
+    }
   ]
 }

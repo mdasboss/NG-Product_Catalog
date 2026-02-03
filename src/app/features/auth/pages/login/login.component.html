@@ -1,1 +1,13 @@
-<p>login works!</p>
+<form [formGroup]="form" (ngSubmit)="submit()" class="card p-3">
+  <h2 class="mb-3">Login</h2>
+  <div class="mb-2">
+    <label>Email</label>
+    <input class="form-control" formControlName="email" type="email" />
+  </div>
+  <div class="mb-3">
+    <label>Password</label>
+    <input class="form-control" formControlName="password" type="password" />
+  </div>
+  <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
+  <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Login</button>
+</form>
