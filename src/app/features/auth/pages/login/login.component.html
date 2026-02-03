@@ -1,4 +1,5 @@
-<form [formGroup]="form" (ngSubmit)="submit()" class="card p-3">
+<div class="d-flex justify-content-center align-items-center">
+<form [formGroup]="form" (ngSubmit)="submit()" class="p-3">
   <h2 class="mb-3">Login</h2>
   <div class="mb-2">
     <label>Email</label>
@@ -11,3 +12,4 @@
   <div *ngIf="error" class="alert alert-danger">{{ error }}</div>
   <button class="btn btn-primary" type="submit" [disabled]="form.invalid">Login</button>
 </form>
+</div>

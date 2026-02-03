@@ -22,4 +22,12 @@ export class AuthGuard implements CanActivate {
     return false;
   }
 
+  
+ canMatch(route: Route, segments: UrlSegment[]): boolean {
+    if (this.auth.token) return true;
+    this.router.navigate(['/auth/login']);
+    return false;
+  }
+
+
 }
