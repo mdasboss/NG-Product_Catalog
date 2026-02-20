@@ -40,7 +40,7 @@ export class ProductsStore extends ComponentStore<ProductState> {
     const min = this.minPriceSig();
     const max = this.maxPriceSig();
 
-    return products?.filter(p=>{
+    return products?.filter(p=> {
       const matchesQuery = !q || p.title.toLowerCase().includes(q);
       const matchCat = !cat || p.category === cat;
       const matchesMin = min == null || p.price >= min;

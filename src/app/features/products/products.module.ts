@@ -6,12 +6,14 @@ import { FilterBarComponent } from './components/filter-bar/filter-bar.component
 import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { SharedModule } from '../../shared/shared.module';
+import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 
 
 @NgModule({
   declarations: [
     ProductHomeComponent,
-    FilterBarComponent
+    FilterBarComponent,
+    ProductDetailsComponent
   ],
   imports: [
     CommonModule,

@@ -30,7 +30,7 @@
     type="number"
     class="form-control form-control-sm"
     [value]="minPrice ?? ''"
-    (input)="minPriceChange.emit(min.value === '' ? null : +min.value)"
+    (input)="minPriceChange.emit(min.value === '' ? null : + min.value)"
     placeholder="Min price"
   />
 

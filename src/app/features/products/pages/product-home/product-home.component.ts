@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { ProductsStore } from '../../state/products.stor.service';
+import { Router } from '@angular/router';
+import { Product } from '../../services/product.service';
 
 @Component({
   selector: 'app-product-home',
@@ -8,7 +10,7 @@ import { ProductsStore } from '../../state/products.stor.service';
   providers: [ProductsStore]
 })
 export class ProductHomeComponent {
-  constructor(public store: ProductsStore) {}
+  constructor(public store: ProductsStore, public router:Router) {}
 
   
 // convenience getters for template (optional)
@@ -16,5 +18,10 @@ export class ProductHomeComponent {
   get category()  { return this.store.categorySig(); }
   get minPrice()  { return this.store.minPriceSig(); }
   get maxPrice()  { return this.store.maxPriceSig(); }
+
+
+  showProductDetails(p:Product){
+    this.router.navigate(['/products/produt-details', p.id]);
+  }
 
 }

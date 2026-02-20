@@ -26,7 +26,7 @@
 <div class="row g-3" *ngIf="!(store.loading$ | async)">
   @for (p of store.filtered(); track p.id) {
     <div class="col-sm-6 col-md-4 col-lg-3">
-      <mat-card class="h-100">
+      <mat-card class="h-100 text-secondary">
         <mat-card-header>
           <mat-card-title>{{ p.title }}</mat-card-title>
           <mat-card-subtitle>{{ p.category }}</mat-card-subtitle>
@@ -35,8 +35,15 @@
           <div class="fw-bold fs-5 mt-2">{{ p.price | currency:'INR' }}</div>
         </mat-card-content>
         <mat-card-actions class="d-flex justify-content-between">
-          <button mat-stroked-button color="primary">Details</button>
-          <button mat-raised-button color="accent">Add to cart</button>
+          <button mat-stroked-button color="primary" (click)="showProductDetails(p)">Details</button>
+
+<mat-icon
+  fontIcon="add_shopping_cart"
+  color="accent"
+  aria-hidden="true"
+  matTooltip="Add to cart"
+></mat-icon>
+
         </mat-card-actions>
       </mat-card>
     </div>

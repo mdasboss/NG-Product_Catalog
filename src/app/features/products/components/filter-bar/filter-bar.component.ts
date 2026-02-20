@@ -21,23 +21,4 @@ export class FilterBarComponent {
   @Output() minPriceChange = new EventEmitter<number | null>();
   @Output() maxPriceChange = new EventEmitter<number | null>();
 
-  // (Optional) Event handler methods if you want TS-typed handlers:
-  onQueryInput(e: Event) {
-    const value = (e.target as HTMLInputElement).value;
-    this.queryChange.emit(value);
-  }
-  onCategoryChange(e: Event) {
-    const value = (e.target as HTMLSelectElement).value;
-    this.categoryChange.emit(value || null);
-  }
-  onMinPriceInput(e: Event) {
-    const v = (e.target as HTMLInputElement).value;
-    this.minPriceChange.emit(v === '' ? null : +v);
-  }
-  onMaxPriceInput(e: Event) {
-    const v = (e.target as HTMLInputElement).value;
-    this.maxPriceChange.emit(v === '' ? null : +v);
-  }
-
-
 }

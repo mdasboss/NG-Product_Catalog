@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 
 
 // Material
+import { MatTooltipModule } from '@angular/material/tooltip'
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatIconModule }    from '@angular/material/icon';
 import { MatButtonModule }  from '@angular/material/button';
@@ -16,12 +17,14 @@ import { MatInputModule }   from '@angular/material/input';
 import { MatSelectModule }  from '@angular/material/select';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     CommonModule,
@@ -37,7 +40,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
     MatInputModule,
     MatSelectModule,
     MatDividerModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatTooltipModule
 
   ],
   exports: [CommonModule, HeaderComponent, FooterComponent,

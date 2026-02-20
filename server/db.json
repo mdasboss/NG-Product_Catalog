@@ -26,6 +26,18 @@
       "email": "maruthi@example.com",
       "password": "dasar",
       "id": 5
+    },
+    {
+      "name": "laxmi",
+      "email": "laxmi@gmail.com",
+      "password": "laxmi@12345678",
+      "id": 6
+    },
+    {
+      "name": "Yuvaraj",
+      "email": "yuvaraj@gmail.com",
+      "password": "Yuvaraj@123",
+      "id": 7
     }
   ],
   "products": [
@@ -52,6 +64,127 @@
       "title": "ThinkPad X1",
       "category": "Laptops",
       "price": 1500
+    },
+    {
+      "id": 5,
+      "title": "Samsung Galaxy S24",
+      "category": "Phones",
+      "price": 850
+    },
+    {
+      "id": 6,
+      "title": "Dell XPS 13",
+      "category": "Laptops",
+      "price": 1400
+    },
+    {
+      "id": 7,
+      "title": "iPad Pro 12.9",
+      "category": "Tablets",
+      "price": 1100
+    },
+    {
+      "id": 8,
+      "title": "Sony WH-1000XM5",
+      "category": "Headphones",
+      "price": 400
+    },
+    {
+      "id": 9,
+      "title": "AirPods Pro 2",
+      "category": "Headphones",
+      "price": 250
+    },
+    {
+      "id": 10,
+      "title": "Samsung Galaxy Tab S9",
+      "category": "Tablets",
+      "price": 950
+    },
+    {
+      "id": 11,
+      "title": "Apple Watch Series 9",
+      "category": "Wearables",
+      "price": 500
+    },
+    {
+      "id": 12,
+      "title": "Fitbit Sense 2",
+      "category": "Wearables",
+      "price": 300
+    },
+    {
+      "id": 13,
+      "title": "OnePlus 12",
+      "category": "Phones",
+      "price": 780
+    },
+    {
+      "id": 14,
+      "title": "Asus ROG Strix",
+      "category": "Laptops",
+      "price": 1800
+    },
+    {
+      "id": 15,
+      "title": "HP Envy x360",
+      "category": "Laptops",
+      "price": 1000
+    },
+    {
+      "id": 16,
+      "title": "Google Pixel Watch 2",
+      "category": "Wearables",
+      "price": 350
+    },
+    {
+      "id": 17,
+      "title": "Bose QuietComfort Ultra",
+      "category": "Headphones",
+      "price": 380
+    },
+    {
+      "id": 18,
+      "title": "Amazon Kindle Oasis",
+      "category": "Tablets",
+      "price": 280
+    },
+    {
+      "id": 19,
+      "title": "Logitech MX Master 3S",
+      "category": "Accessories",
+      "price": 120
+    },
+    {
+      "id": 20,
+      "title": "Sony Bravia 55” 4K TV",
+      "category": "TVs",
+      "price": 1300
+    },
+    {
+      "id": 21,
+      "title": "LG OLED C3 65”",
+      "category": "TVs",
+      "price": 2400
+    },
+    {
+      "id": 22,
+      "title": "Samsung Odyssey G9",
+      "category": "Monitors",
+      "price": 1600
+    },
+    {
+      "id": 23,
+      "title": "BenQ PD3220U",
+      "category": "Monitors",
+      "price": 1100
+    },
+    {
+      "id": 24,
+      "title": "Anker PowerCore 26800",
+      "category": "Accessories",
+      "price": 80
     }
   ]
+
 }
