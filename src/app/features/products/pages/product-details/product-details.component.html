@@ -1,1 +1,37 @@
-<p>product-details works!</p>
+<ng-container *ngIf="product() as p; else loading">
+  <div class="card p-3">
+    <h2 class="mb-2">{{ p.title }}</h2>
+    <div class="text-muted mb-2">₹ {{ p.price }}</div>
+    <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, iure.</p>
+    
+    <div role="tabpanel">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active">
+                <a href="#specification" aria-controls="home" role="tab" data-toggle="tab">Specification</a>
+            </li>
+            <li role="presentation">
+                <a href="#productDetails" aria-controls="tab" role="tab" data-toggle="tab">Product Details</a>
+            </li>
+        </ul>
+    
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="specification">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta, officia.</div>
+            <div role="tabpanel" class="tab-pane" id="productDetails">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus, repudiandae.</div>
+        </div>
+    </div>
+    
+    <a routerLink = "/products" class="btn btn-outline-success btn-sm mx-auto">Back</a>
+  </div>
+</ng-container>
+
+<ng-template #loading>
+  <div class="card p-3">
+    <div class="placeholder-glow">
+      <span class="placeholder col-6 mb-2"></span>
+      <span class="placeholder col-3 mb-2"></span>
+      <span class="placeholder col-9"></span>
+    </div>
+  </div>
+</ng-template>
