@@ -1,10 +1,21 @@
 
 <mat-toolbar color="primary" class="px-3">
   <a class="navbar-brand text-white text-decoration-none me-3" routerLink="/">Product Catalog</a>
-  <ng-container *ngIf="(isAuth$ | async) === true">
- <a mat-button routerLink="/products">Products</a>
+ <ng-container *ngIf="isAuth$ | async">
+  <a mat-button routerLink="/products">Products</a>
   <a mat-button routerLink="/auth/profile">Profile</a>
-  </ng-container>
+
+  <a mat-button routerLink="/cart" class="position-relative">
+    Cart
+    <span class="badge bg-warning text-dark ms-1"
+          *ngIf="(totalQty$ | async) as q; else zero">
+      {{ q }}
+    </span>
+    <ng-template #zero>
+      <span class="badge bg-danger ms-1">0</span>
+    </ng-template>
+  </a>
+</ng-container>
  
   <span class="flex-grow-1"></span>
 

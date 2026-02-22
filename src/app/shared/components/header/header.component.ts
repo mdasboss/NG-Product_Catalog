@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { AuthService } from '../../../features/auth/services/auth.service';
 import { Router } from '@angular/router';
+import { CartService } from '../../../features/cart/services/cart.service';
 
 @Component({
   selector: 'app-header',
@@ -11,10 +12,10 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit{
 
   isAuth$ = this.auth.isAuth$;
-  constructor(private auth:AuthService, private router:Router){}
+  totalQty$ = this.cartService.totalQty$;
+  constructor(private auth:AuthService, private router:Router, private cartService:CartService){}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
     logout(): void {
         this.auth.logout();

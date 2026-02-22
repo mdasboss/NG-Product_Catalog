@@ -1,0 +1,60 @@
+ <div class="cart-container">
+  <div class="card glass-card p-3">
+    <h2 class="mb-3 text-white">Your Cart</h2>
+
+    <ng-container *ngIf="(items$ | async) as items; else empty">
+      <div *ngIf="items.length; else empty">
+        <div class="table-responsive">
+          <table class="table align-middle">
+            <thead>
+              <tr>
+                <th>Product</th>
+                <th class="text-end">Price</th>
+                <th class="text-center">Qty</th>
+                <th class="text-end">Subtotal</th>
+                <th class="text-end"></th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr *ngFor="let it of items; trackBy: trackById">
+                <td class="fw-medium">{{ it.title }}</td>
+                <td class="text-end">₹ {{ it.price }}</td>
+                <td class="text-center qty-controls">
+                  <button mat-icon-button color="primary" (click)="dec(it)" [disabled]="it.qty <= 1" aria-label="Decrease">
+                    <mat-icon>remove</mat-icon>
+                  </button>
+                  <strong class="px-2">{{ it.qty }}</strong>
+                  <button mat-icon-button color="primary" (click)="inc(it)" aria-label="Increase">
+                    <mat-icon>add</mat-icon>
+                  </button>
+                </td>
+                <td class="text-end">₹ {{ it.price * it.qty }}</td>
+                <td class="text-end">
+                  <button mat-stroked-button color="warn" (click)="remove(it.productId)">Remove</button>
+                </td>
+              </tr>
+            </tbody>
+
+            <tfoot>
+              <tr class="fw-bold">
+                <td>Total</td>
+                <td></td>
+                <td class="text-center">{{ totalQty$ | async }}</td>
+                <td class="text-end">₹ {{ totalAmount$ | async }}</td>
+                <td class="text-end">
+                  <button mat-raised-button color="warn" (click)="clear()">Clear Cart</button>
+                </td>
+              </tr>
+            </tfoot>
+          </table>
+        </div>
+      </div>
+    </ng-container>
+
+    <ng-template #empty>
+      <div class="alert alert-info mb-3">Your cart is empty.</div>
+      <a routerLink="/products" class="btn btn-primary btn-sm">Browse products</a>
+    </ng-template>
+  </div>
+</div>
