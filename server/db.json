@@ -38,6 +38,12 @@
       "email": "yuvaraj@gmail.com",
       "password": "Yuvaraj@123",
       "id": 7
+    },
+    {
+      "name": "Deepika",
+      "email": "deepika@test.com",
+      "password": "Deepika@1234",
+      "id": 8
     }
   ],
   "products": [
@@ -186,5 +192,4 @@
       "price": 80
     }
   ]
-
 }
