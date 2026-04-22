@@ -1,10 +1,18 @@
 <!-- app.component.html -->
-<div class="app-layout">
-  <app-header></app-header>
 
+
+
+<div class="app-layout">
+  <!-- <div *ngIf="loaderService.loading$ | async" class="loader">
+    Loading...
+  </div> -->
+  
+  <app-header></app-header>
+  <!-- <div *ngIf="!loaderService.loading$ | async" > -->
   <main class="app-content container">
     <router-outlet></router-outlet>
   </main>
-
+<!-- </div> -->
   <app-footer></app-footer>
+  
 </div>

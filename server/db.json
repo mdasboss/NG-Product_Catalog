@@ -44,6 +44,12 @@
       "email": "deepika@test.com",
       "password": "Deepika@1234",
       "id": 8
+    },
+    {
+      "name": "MCap",
+      "email": "maruthi.b.maruthi@gmail.com",
+      "password": "Maruthi@123",
+      "id": 9
     }
   ],
   "products": [
