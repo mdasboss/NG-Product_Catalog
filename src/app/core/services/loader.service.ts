@@ -10,11 +10,11 @@ loading$ = this.loading.asObservable();
   constructor() { }
 
   showLoader(){
-    this.loading.next(true);
+    setTimeout(() => this.loading.next(true));
   }
 
   hideLoader(){
-    this.loading.next(false);
+   setTimeout(() => this.loading.next(false))
   }
 
 }

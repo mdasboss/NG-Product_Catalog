@@ -50,6 +50,12 @@
       "email": "maruthi.b.maruthi@gmail.com",
       "password": "Maruthi@123",
       "id": 9
+    },
+    {
+      "name": "shr",
+      "email": "shr@gmail.com",
+      "password": "shr@23343",
+      "id": 10
     }
   ],
   "products": [

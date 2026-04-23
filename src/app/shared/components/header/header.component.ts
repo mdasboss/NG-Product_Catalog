@@ -10,7 +10,7 @@ import { CartService } from '../../../features/cart/services/cart.service';
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent implements OnInit{
-
+  
   isAuth$ = this.auth.isAuth$;
   totalQty$ = this.cartService.totalQty$;
   constructor(private auth:AuthService, private router:Router, private cartService:CartService){}

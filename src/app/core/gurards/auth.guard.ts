@@ -11,23 +11,7 @@ export class AuthGuard implements CanActivate {
      if(this.auth.token) return true;
      this.router.navigate(['/auth/login']);
      return false
-  }
-
-  
- canLoad(route: Route, segments: UrlSegment[]): boolean {
-    if (this.auth.token) {
-      return true;
-    }
-    this.router.navigate(['/auth/login']);
-    return false;
-  }
-
-  
- canMatch(route: Route, segments: UrlSegment[]): boolean {
-    if (this.auth.token) return true;
-    this.router.navigate(['/auth/login']);
-    return false;
-  }
+  } 
 
 
 }

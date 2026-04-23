@@ -1,18 +1,9 @@
 <!-- app.component.html -->
-
-
-
 <div class="app-layout">
-  <div *ngIf="loaderService.loading$ | async" class="loader">
-    <p class="text-danger" style="color: red;">Loading...</p>
-  </div>
-  
   <app-header></app-header>
-  <div *ngIf="!(loaderService.loading$ | async)" >
   <main class="app-content container">
     <router-outlet></router-outlet>
   </main>
-</div>
   <app-footer></app-footer>
   
 </div>
