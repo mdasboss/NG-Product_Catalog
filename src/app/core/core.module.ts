@@ -5,7 +5,7 @@ import { ApiConfiguration } from './services/api-config.service';
 import { AuthService } from '../features/auth/services/auth.service';
 import { AuthGuard } from './gurards/auth.guard';
 import { AuthInterceptor } from './interceptors/auth.interceptor';
-
+import { LoadInterceptor } from './interceptors/load.interceptor';
 
 
 @NgModule({
@@ -20,7 +20,8 @@ providers: [
   ApiConfiguration,
   AuthService,
   AuthGuard,
-  { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+  { provide: HTTP_INTERCEPTORS, useClass: LoadInterceptor, multi: true }
 ]
 
 })
