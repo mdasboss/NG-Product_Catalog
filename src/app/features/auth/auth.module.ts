@@ -6,13 +6,15 @@ import { LoginComponent } from './pages/login/login.component';
 import { SignuComponent } from './pages/signu/signu.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ProfileComponent } from './pages/profile/profile.component';
+import { EditUserComponent } from './pages/edit-user/edit-user.component';
 
 
 @NgModule({
   declarations: [
     LoginComponent,
     SignuComponent,
-    ProfileComponent
+    ProfileComponent,
+    EditUserComponent
   ],
   imports: [
     CommonModule,

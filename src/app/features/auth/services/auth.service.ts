@@ -4,6 +4,7 @@ import { environment } from "../../../../environments/environment";
 import { BehaviorSubject, delay, map, Observable, tap } from "rxjs";
 import { ApiConfiguration } from "../../../core/services/api-config.service";
 import { isPlatformBrowser } from "@angular/common";
+import { error } from "node:console";
 
 export interface AuthUser {
     id: number,
@@ -98,6 +99,13 @@ clearToken() {
     // No /me → decode token or re-fetch users if needed
   }
 
+   getUserById(id: number | string) {
+  return this.httpClient.get<AuthUser>(
+    `${this.api.endpoints.user}/${id}`
+  );
+}
+
+// updateUser()
     
 
 

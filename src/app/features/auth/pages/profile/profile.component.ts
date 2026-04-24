@@ -19,12 +19,9 @@ export class ProfileComponent implements OnInit{
   }
 
   
-
-logout(): void {
-    this.auth.logout();
-    // Optionally navigate away from profile after logout
-    this.router.navigateByUrl('/auth/login');
-  }
+ editUser(id:number){
+   this.router.navigate(['/auth/edit-user', id]) 
+ }
 
 
 }
