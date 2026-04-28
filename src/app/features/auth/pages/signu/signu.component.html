@@ -31,8 +31,8 @@
 
     <div *ngIf="error" class="alert alert-danger py-2">{{ error }}</div>
 
-    <button class="btn btn-primary" type="submit" [disabled]="form.invalid || loading">
-      {{ loading ? 'Creating...' : 'Sign Up' }}
+    <button class="btn btn-primary" type="submit" [disabled]="form.invalid || isSubmitted">
+      {{ isSubmitted ? 'Creating...' : 'Sign Up' }}
     </button>
   </form>
 </div>

@@ -10,9 +10,7 @@ import {LoaderService } from './core/services/loader.service';
 export class AppComponent {
     constructor(private auth:AuthService, public loaderService:LoaderService){
           
-    if (this.auth.token) {
-          // this.auth.restoreSession();
-        }
+  
 
     }
 
